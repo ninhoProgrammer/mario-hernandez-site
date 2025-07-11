@@ -1,52 +1,33 @@
-# Astro Starter Kit: Basics
+<div align="center">
+    <h1 style="font-size: 3em; font-weight: bold; margin: 20px 0;">MakeWeb</h1>
+</div>
 
-```sh
-npm create astro@latest -- --template basics
-```
+![banner](https://raw.githubusercontent.com/MakeWebMX/MakeWebPrincipal/refs/heads/main/public/MakeWeb%20-%20Hero.webp)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Main page of MakeWeb developed with Astro 5, TailWind, and Three.js
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![[banner](./public/MakeWeb - Hero.webp)](https://raw.githubusercontent.com/MakeWebMX/MakeWebPrincipal/refs/heads/main/public/MakeWeb%20Logo_MW.svg)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+<h2><a src="https://img.icons8.com/?size=100&id=aJPLw-4jUCR3&format=png&color=000000" alt="linkedin-circled"/></a> Technologies</h2>
 
-## 🚀 Project Structure
+**[Astro 5](https://astro.build)** is a modern static site generator that allows you to build fast and optimized websites.  
+**[Three.js](https://threejs.org)** is a JavaScript library that enables the creation of 3D graphics in the browser using WebGL.  
+**[TailWind](https://tailwindcss.com)** is a utility-first CSS framework, providing a highly customizable and efficient way to style your web applications.
 
-Inside of your Astro project, you'll see the following folders and files:
+<h2>License</h2>
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+Copyright (c) 2024  Designed & Developed [MakeWeb](https://github.com/MakeWebMX)
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Please contact [Mario](https://www.linkedin.com/in/it-mario-hernández/) if you would like to reuse any part of this site for personal or commercial use.
 
-## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+<h2>Contact Me</h2>
+<a href="https://www.linkedin.com/in/it-mario-hernández/"><img width="64" height="64" src="https://img.icons8.com/arcade/64/linkedin-circled.png" alt="linkedin-circled"/></a>
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+<h2>Comments</h2>
 
-## 👀 Want to learn more?
+There are comments in Spanish; you can send a message for more information.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+<h2>License</h2>
+
+This project is licensed under the terms of the MIT License. See the [MIT License](LICENSE)

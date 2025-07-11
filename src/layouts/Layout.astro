@@ -1,22 +1,36 @@
+---
+import LightBacgraound from '../components/LightBacgraound.astro';
+import Header from '../components/Header.astro';
+import Island from '../components/Island.astro';
+const { title } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="Empresa dedicada a inovar Sotfware" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<link rel="icon" type="image/svg+xml" href="../MakeWeb_MM.svg"/>
+		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-[url('/blue-sky-background.webp')] bg-sky-500 md:overflow-hidden">
+		<Header />
+		<Island />
+		
 		<slot />
+		
 	</body>
+	
+	
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+
+<style is:global>
+    html {
+		font-family: Kepler-296, 'Kepler 296', sans-serif;
+		font-size: 16px;
 	}
+
+	
 </style>

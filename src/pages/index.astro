@@ -1,11 +1,44 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="MAKE WEB">
+	<main class="relod">
+		<section class="section flex h-screen w-screen flex-col relative items-center justify-center z-36">
+			<Hero />
+		</section>
+
+		<section class="section px-20 h-screen w-screen flex justify-center md:items-center z-36">
+			<Card title="Services" text="" img="../image1.webp" href="" />
+		</section>
+		<section class="section pr-20 h-screen w-screen flex justify-center md:justify-end md:items-center z-36">
+			<Card title="Services" text="" img="../image1.webp" href="" />
+		</section>
+		
+		<section class="section pl-20 h-screen w-screen flex justify-center md:justify-start md:items-center z-36">
+			<Card title="Services" text="" img="../image1.webp" href="" />
+		</section>
+		
+		<section class="section px-1 h-screen w-screen flex justify-center md:justify- md:items-center z-36">
+			<Card title="Services" text="" img="../image1.webp" href="" />
+		</section>
+		
+		<section class="section h-screen w-screen text-center overflow-hidden translate-y-0">
+			<Footer />
+		</section>
+		
+		
+	</main>
+	
 </Layout>
+
+<style>
+.section {
+	transition: transform 10s ease-in-out;
+}
+</style>
+

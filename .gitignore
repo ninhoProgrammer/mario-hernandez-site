@@ -1,24 +1,14 @@
-# build output
-dist/
-
-# generated types
-.astro/
-
-# dependencies
-node_modules/
-
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# environment variables
-.env
-.env.production
-
-# macOS-specific files
-.DS_Store
-
-# jetbrains setting folder
-.idea/
+/dist
+node_modules/node_modules/
+node_modules/.vite/deps/chunk-QXP2ABXY.js.map
+node_modules/.vite/deps/chunk-QXP2ABXY.js
+node_modules/.vite/deps/chunk-U3LI7FBV.js.map
+node_modules/.vite/deps/chunk-U3LI7FBV.js
+node_modules/.vite/deps/three_examples_jsm_loaders_FBXLoader__js.js
+node_modules/.vite/deps/three_examples_jsm_loaders_FBXLoader__js.js.map
+node_modules/.vite/deps/three.js
+node_modules/.vite/deps/three.js.map
+node_modules
+.vercel
+.astro
+.vscode
