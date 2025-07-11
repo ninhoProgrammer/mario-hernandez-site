@@ -3,47 +3,35 @@ interface Props {
 	title: string;
 	text: string;
 	img: string;
+    pick: string;
 	href: string;
 }
 
-const { href, title, text, img } = Astro.props;
+const { href, title, text, img, pick } = Astro.props;
 ---
 
-<article
-  class="relative group flex flex-col max-w-sm w-full p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 overflow-hidden"
->
-  <!-- Imagen destacada -->
-  <div class="relative overflow-hidden rounded-xl">
-    <img
-      src={img}
-      alt={title}
-      class="w-full h-56 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
-    />
-  </div>
-
-  <!-- Contenido -->
-  <div class="mt-4">
-    <h2 class="text-xl font-bold text-white">{title}</h2>
-    <p class="text-white/80 mt-2 text-sm leading-relaxed">{text}</p>
-  </div>
-
-  <!-- Footer -->
-  <div class="mt-4 flex justify-between items-center">
-    <div class="flex items-center gap-3">
-      <img
-        src={img}
-        alt="Avatar"
-        class="h-10 w-10 rounded-full border-2 border-white/40 shadow"
-      />
-      <span class="text-white/70 text-sm">More info</span>
+<article class="relative group flex flex-col text-lg max-w-sm w-full p-5 rounded-2xl bg-red-500 backdrop-blur-md border border-white/20 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 overflow-hidden">
+    <!-- Imagen destacada -->
+    <div class="relative overflow-hidden rounded-xl">
+        <img src={img} alt={title} class="w-full h-64 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105" />
     </div>
 
-    <a
-      href={href}
-      class="text-sm text-white bg-[var(--color-secundary)] px-4 py-2 rounded-lg transition-all hover:bg-[#6d2b25] hover:scale-105"
-    >
-      View →
-    </a>
-  </div>
+    <!-- Contenido -->
+    <div class="mt-4">
+        <h2 class="text-2xl font-bold text-white">{title}</h2>
+        <p class="text-white/80 mt-2 leading-relaxed">{text}</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <img src={pick} alt="Avatar" class="h-20 w-20 rounded-full border-4 border-white/40 shadow" />
+            <span class="text-white/70">More info</span>
+        </div>
+
+        <a href={href} class=" text-white bg-blue-500 px-5 py-4 rounded-lg transition-all hover:bg-blue-900 hover:scale-105">
+            View →
+        </a>
+    </div>
 </article>
 
