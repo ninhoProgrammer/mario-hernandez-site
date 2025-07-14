@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="About Me">
-    <section class="flex h-screen w-screen flex-col relative items-center justify-center pt-28 px-4 z-36 overflow-hidden">
-        <div class="flex flex-row items-center justify-center px-4 md:px-16 py-14 md:py-20 z-36">
+    <section class="flex h-screen w-screen flex-col relative items-center justify-center pt-12 z-36 overflow-hidden">
+        <div class="flex flex-row items-center justify-center py-8 md:py-12 z-36">
             <div class="w-full max-w-6xl bg-white/70 backdrop-blur-lg overflow-hidden rounded-3xl shadow-2xl transform transition-all duration-700 ease-out animate-fade-in-up flex flex-col md:flex-row">
             <!-- Imagen destacada -->
                 <div class="flex md:w-2/3 w-full h-auto md:h-auto justify-center items-center relative overflow-hidden bg-gray-100">
@@ -43,9 +43,50 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </div>
 
-        <div class="relative w-screen bg-slate-800 py-3 px-6 text-white text-center text-sm mt-6">
+        <div class="relative w-screen bg-slate-800 py-3 px-6 text-white text-center text-sm mt-12">
             <div class="absolute -top-3 left-0 w-full h-5 bg-white skew-y-3 z-0"></div>
             <p class="relative z-10">Designed by Mario Hernández · @ninho</p>
         </div>
     </section>
+    
 </Layout>
+
+<style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .animate-fade-in {
+        @apply opacity-0 animate-[fadeIn_1s_ease-out_forwards];
+    }
+
+    .animate-slide-in-left {
+        @apply opacity-0 translate-x-[-20px] animate-[slideInLeft_1s_ease-out_forwards];
+    }
+
+    .animate-fade-in-up {
+        @apply opacity-0 translate-y-6 animate-[fadeInUp_1s_ease-out_forwards];
+    }
+
+    @keyframes fadeIn {
+        to {
+        opacity: 1;
+        }
+    }
+
+    @keyframes slideInLeft {
+        to {
+        opacity: 1;
+        transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
+}
+</style>

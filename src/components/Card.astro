@@ -10,15 +10,15 @@ interface Props {
 const { href, title, text, img, pick } = Astro.props;
 ---
 
-<article class="relative group flex flex-col text-base max-w-sm w-full p-5 rounded-2xl bg-red-500 backdrop-blur-md border border-white/20 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 overflow-hidden">
+<article class="relative group flex flex-col text-xs max-w-sm w-full p-5 rounded-2xl bg-red-500 backdrop-blur-md border border-white/20 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 overflow-hidden">
     <!-- Imagen destacada -->
     <div class="relative overflow-hidden rounded-xl">
-        <img src={img} alt={title} class="w-full h-64 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105" />
+        <img src={img} alt={title} class="w-full h-48 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105" />
     </div>
 
     <!-- Contenido -->
-    <div class="mt-4 w-auto h-40">
-        <h2 class="text-2xl font-bold text-white">{title}</h2>
+    <div class="mt-4 w-auto h-32">
+        <h2 class="text-xl font-bold text-white">{title}</h2>
         <p class="text-white/80 mt-2 leading-relaxed">{text}</p>
     </div>
 
