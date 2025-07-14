@@ -4,7 +4,7 @@ import { Code, Languages, Settings, Laptop2 } from "lucide-react";
 
 const skills = [
   {
-    icon: <Code className="w-10 h-10 text-blue-600" />,
+    icon: <Code className="w-8 h-8 text-blue-600" />,
     title: "Programming",
     description: "C#, SQL, JavaScript",
     detail: "Efficient backend and frontend logic using clean, scalable practices."
@@ -52,7 +52,7 @@ const titleVariant = {
 
 export default function Portfolio() {
   return (
-    <main className="min-h-screen w-full  pt-28 px-4">
+    <main className="min-h-screen w-full pt-28 px-4">
       <motion.section
         id="skills"
         className="max-w-6xl mx-auto"
@@ -60,16 +60,16 @@ export default function Portfolio() {
         initial="hidden"
         animate="show"
       >
-        <h2 className="text-5xl font-bold mb-12 text-center text-blue-800">My Skills</h2>
+        <h2 className="text-5xl font-bold mb-12 text-center text-white">My Skills</h2>3541.25
 
         <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="group bg-white/70 backdrop-blur-lg p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300"
+              className="group bg-white/70 backdrop-blur-lg p-5 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300"
               variants={item}
             >
-              <div className="flex items-start gap-4 mb-4">
+              <div className="flex items-start gap-2 mb-4">
                 <motion.div
                   className="transition-transform duration-300"
                   whileHover={{ rotate: 10, scale: 1.2 }}
