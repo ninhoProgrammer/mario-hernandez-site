@@ -51,53 +51,36 @@ const titleVariant = {
 };
 
 export default function Portfolio() {
-  return (
-    <main className="min-h-screen w-full pt-28 px-4">
-      <motion.section
-        id="skills"
-        className="max-w-6xl mx-auto"
-        variants={container}
-        initial="hidden"
-        animate="show"
-      >
-        <h2 className="text-5xl font-bold mb-12 text-center text-white">My Skills</h2>
+    return (
+        <main >
+        <motion.section id="skills" className="max-w-6xl pt-28 px-4 mx-auto" variants={container} initial="hidden" animate="show">
+            <h2 className="text-5xl font-bold mb-12 text-center text-white">My Skills</h2>
 
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {skills.map((skill, index) => (
-            <motion.div
-              key={index}
-              className="group bg-white/70 backdrop-blur-lg p-5 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300"
-              variants={item}
-            >
-              <div className="flex items-start gap-2 mb-4">
-                <motion.div
-                  className="transition-transform duration-300"
-                  whileHover={{ rotate: 10, scale: 1.2 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  {skill.icon}
-                </motion.div>
-                <div>
-                  <motion.h3
-                    className="text-2xl font-semibold text-gray-800"
-                    variants={titleVariant}
-                  >
-                    {skill.title}
-                  </motion.h3>
-                  <p className="text-gray-600">{skill.description}</p>
-                </div>
-              </div>
-              <p className="text-gray-700">{skill.detail}</p>
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {skills.map((skill, index) => (
+                    <motion.div key={index} className="group bg-white/70 backdrop-blur-lg p-5 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300" variants={item}>
+                        <div className="flex items-start gap-2 mb-4">
+                            <motion.div className="transition-transform duration-300" whileHover={{ rotate: 10, scale: 1.2 }} transition={{ type: "spring", stiffness: 300 }}>
+                                {skill.icon}
+                            </motion.div>
+                            <div>
+                                <motion.h3 className="text-2xl font-semibold text-gray-800" variants={titleVariant}>
+                                    {skill.title}
+                                </motion.h3>
+                                <p className="text-gray-600">{skill.description}</p>
+                            </div>
+                        </div>
+                        <p className="text-gray-700">{skill.detail}</p>
+                    </motion.div>
+                ))}
             </motion.div>
-          ))}
-        </motion.div>
-      </motion.section>
+        </motion.section>
 
-      <footer className="bg-white text-center p-4 mt-16 shadow-inner">
-        <p className="text-sm text-gray-500">
-          &copy; 2025 Mario Hernandez. All rights reserved. Using React
-        </p>
-      </footer>
-    </main>
-  );
+        <footer className="bg-white text-center p-4 mt-16 shadow-inner">
+            <p className="text-sm text-gray-500">
+            &copy; 2025 Mario Hernandez. All rights reserved. Using React
+            </p>
+        </footer>
+        </main>
+    );
 }
