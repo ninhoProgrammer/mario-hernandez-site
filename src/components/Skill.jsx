@@ -60,7 +60,7 @@ export default function Portfolio() {
         initial="hidden"
         animate="show"
       >
-        <h2 className="text-5xl font-bold mb-12 text-center text-white">My Skills</h2>3541.25
+        <h2 className="text-5xl font-bold mb-12 text-center text-white">My Skills</h2>
 
         <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skills.map((skill, index) => (
