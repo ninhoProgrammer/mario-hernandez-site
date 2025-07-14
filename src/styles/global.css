@@ -1,37 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer utilities {
-  .animate-fade-in {
-    @apply opacity-0 animate-[fadeIn_1s_ease-out_forwards];
+:root {
+    --color-primary: #e92210; 
+    --color-secondary: #454f5f; 
+    --color-accent: #fff6f6f5; 
   }
-
-  .animate-slide-in-left {
-    @apply opacity-0 translate-x-[-20px] animate-[slideInLeft_1s_ease-out_forwards];
-  }
-
-  .animate-fade-in-up {
-    @apply opacity-0 translate-y-6 animate-[fadeInUp_1s_ease-out_forwards];
-  }
-
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideInLeft {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-}
