@@ -5,12 +5,12 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="About Me">
     <section class="flex h-screen w-screen flex-col relative items-center justify-center pt-12 z-36 overflow-hidden">
         <div class="flex flex-row items-center justify-center py-8 md:py-12 z-36">
-            <div class="w-full max-w-6xl bg-white/70 backdrop-blur-lg overflow-hidden rounded-3xl shadow-2xl transform transition-all duration-700 ease-out animate-fade-in-up flex flex-col md:flex-row">
+            <div class="w-auto max-w-4xl bg-white/70 backdrop-blur-lg overflow-hidden rounded-3xl shadow-2xl transform transition-all duration-700 ease-out animate-fade-in-up flex flex-col md:flex-row">
             <!-- Imagen destacada -->
-                <div class="flex md:w-2/3 w-full h-auto md:h-auto justify-center items-center relative overflow-hidden bg-gray-100">
-                    <div class="absolute w-44 h-44 bg-red-500 rounded-full -mt-44 ml-60 blur-xl"></div>
+                <div class="flex w-full md:h-auto p-4 justify-center items-center relative overflow-hidden bg-gray-100">
+                    <div class="absolute w-44 h-44 bg-red-500 rounded-full -mt-36 ml-52 blur-xl"></div>
                     <div class="absolute w-72 h-72 bg-[url('https://images.unsplash.com/photo-1511367461989-f85a21fda167?fm=jpg&q=60&w=3000')] bg-cover bg-center rounded-full shadow-lg border-4 border-white"></div>
-                    <div class="absolute w-20 h-20 bg-red-500 rounded-r-full rounded-t-full -mb-52 mr-60 text-white text-4xl font-bold flex items-center justify-center shadow-md">
+                    <div class="absolute w-20 h-20 bg-red-500 rounded-r-full rounded-t-full -mb-48 mr-52 text-white text-4xl font-bold flex items-center justify-center shadow-md">
                         <span>HI</span>
                     </div>
                 </div>
@@ -19,7 +19,7 @@ import Layout from '../layouts/Layout.astro';
                 <div class=" w-full p-8 flex flex-col justify-between">
                     <div>
                     <h2 class="text-3xl font-bold text-gray-800 animate-slide-in-left">I'm Mario Hernández</h2>
-                    <p class="mt-6 text-gray-700 text-sm animate-fade-in">
+                    <p class="mt-6 text-gray-700 text-xs animate-fade-in">
                         I'm a software developer from San Luis Potosí, Mexico, with experience building robust and scalable applications, as well as securely deploying web-based software.
                         I'm focused on delivering creative solutions to technical problems and enjoy collaborating in teams to develop intuitive software that meets the needs of end users.
                         Feel free to check out my portfolio, where I showcase projects ranging from .NET to Astro — including desktop apps built with C# and API integrations.
