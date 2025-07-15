@@ -34,7 +34,7 @@ const container = {
     hidden: { opacity: 0 },
     show: {
         opacity: 1,
-        transition: {staggerChildren: 0.2}
+        transition: { staggerChildren: 0.2 }
     }
 };
 
@@ -74,7 +74,7 @@ export default function Portfolio() {
                 </motion.div>
             </motion.section>
 
-            <footer className="bg-white text-center p-4 mt-16 shadow-inner">
+            <footer className="bg-white text-center p-4 mt-28 shadow-inner">
                 <p className="text-sm text-gray-500">
                     Using React in this portfolio to showcase my skills and projects.
                 </p>
