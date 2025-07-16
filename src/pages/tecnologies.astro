@@ -1,8 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Tecnology from '../components/Tecnology.vue';
+import SkillContext from '../components/SkillContext.astro';
 ---
 
 <Layout title="Tecnologies">
     <Tecnology client:load />
+    <section class="flex flex-col items-center justify-center ">
+        <SkillContext />
+    </section>
+    
 </Layout>
