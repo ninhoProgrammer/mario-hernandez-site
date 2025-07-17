@@ -1,6 +1,6 @@
 <template>
   <section class="my-16 px-6 max-w-6xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-12 text-gray-800">
+    <h2 class="text-4xl font-bold mb-6 text-gray-800">
       <span class="typed-text inline-block border-r-2 border-blue-500 animate-blink">{{ animatedText }}</span>
     </h2>
 
