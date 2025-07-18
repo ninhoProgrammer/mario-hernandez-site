@@ -6,10 +6,10 @@ import  SocialNetworks  from './SocialNetworks.astro';
     <div class="flex flex-row items-center justify-center py-8 md:py-12 z-36">
         <div class="w-auto max-w-4xl bg-white/70 backdrop-blur-lg overflow-hidden rounded-3xl shadow-2xl transform transition-all duration-700 ease-out animate-fade-in-up flex flex-col md:flex-row">
         <!-- Imagen destacada -->
-            <div class="flex w-1/2 md:h-auto p-4 justify-center items-center relative overflow-hidden bg-gray-100">
-                <div class="absolute w-44 h-44 bg-red-500 rounded-full -mt-36 ml-52 blur-xl"></div>
-                <div class="absolute w-72 h-72 bg-[url('https://images.unsplash.com/photo-1511367461989-f85a21fda167?fm=jpg&q=60&w=3000')] bg-cover bg-center rounded-full shadow-lg border-4 border-white"></div>
-                <div class="absolute w-20 h-20 bg-red-500 rounded-r-full rounded-t-full -mb-48 mr-52 text-white text-4xl font-bold flex items-center justify-center shadow-md">
+            <div class="flex w-1/2 md:h-auto p-4 justify-center items-center relative overflow-hidden bg-[var(--color-accent)]">
+                <div class="absolute w-44 h-44 bg-[var(--color-primary)] rounded-full -mt-36 ml-44 blur-xl"></div>
+                <div class="absolute w-72 h-72 bg-[url('https://images.unsplash.com/photo-1511367461989-f85a21fda167?fm=jpg&q=60&w=3000')] bg-cover bg-center rounded-full shadow-lg border-4 border-[var(--color-accent)]"></div>
+                <div class="absolute w-20 h-20 bg-[var(--color-primary)] rounded-r-full rounded-t-full -mb-48 mr-52 text-[var(--color-accent)] text-4xl font-bold flex items-center justify-center shadow-md">
                     <span>HI</span>
                 </div>
             </div>
@@ -17,8 +17,8 @@ import  SocialNetworks  from './SocialNetworks.astro';
             <!-- Contenido -->
             <div class=" w-3/4 p-8 flex flex-col justify-between">
                 <div>
-                <h2 class="text-3xl font-bold text-gray-800 animate-slide-in-left">I'm Mario Hernández</h2>
-                <p class="mt-6 text-gray-700 text-sm animate-fade-in">
+                <h2 class="text-3xl font-bold text-[var(--color-textTitle)] animate-slide-in-left">I'm Mario Hernández</h2>
+                <p class="mt-6 text-[var(--color-text)] text-sm animate-fade-in">
                     I'm a software developer from San Luis Potosí, Mexico, with experience building robust and scalable applications, as well as securely deploying web-based software.
                     I'm focused on delivering creative solutions to technical problems and enjoy collaborating in teams to develop intuitive software that meets the needs of end users.
                     Feel free to check out my portfolio, where I showcase projects ranging from .NET to Astro — including desktop apps built with C# and API integrations.
@@ -31,8 +31,8 @@ import  SocialNetworks  from './SocialNetworks.astro';
         </div>
     </div>
 
-    <div class="relative w-screen bg-slate-800 py-3 px-6 text-white text-center text-sm mt-12">
-        <div class="absolute -top-3 left-0 w-full h-5 bg-white skew-y-3 z-0"></div>
+    <div class="relative w-screen bg-[var(--color-secondary)] py-3 px-6 text-[var(--color-accent)] text-center text-sm mt-12">
+        <div class="absolute -top-3 left-0 w-full h-5 bg-[var(--color-accent)] skew-y-3 z-0"></div>
         <p class="relative z-10">Designed by Mario Hernández · @ninho</p>
     </div>
 </section>
