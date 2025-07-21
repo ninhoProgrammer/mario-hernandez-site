@@ -1,14 +1,14 @@
 <template>
     <section class="my-16 px-6 max-w-6xl mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-6 text-[var(--color-textTitle)]">
+        <h2 class="text-2xl md:text-4xl font-bold mb-6 text-[var(--color-textTitle)]">
             <span class="typed-text inline-block border-r-2 border-[var(--color-secondary)] animate-blink">{{ animatedText }}</span>
         </h2>
 
         <div class="relative overflow-hidden">
             <div class="flex transition-transform duration-700 ease-in-out" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-                <div v-for="(group, i) in techGroups" :key="i" class="min-w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-4">
-                    <div v-for="tech in group" :key="tech.name" class="bg-white/80 backdrop-blur-lg shadow-md rounded-xl p-6 hover:scale-105 hover:shadow-xl transition">
-                        <img :src="tech.logo" :alt="tech.name" class="w-auto h-14 mx-auto mb-3 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.6)] transition"/>
+                <div v-for="(group, i) in techGroups" :key="i" class="min-w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 px-4">
+                    <div v-for="tech in group" :key="tech.name" class="bg-white/80 backdrop-blur-lg shadow-md rounded-xl p-4 md:p-6 hover:scale-105 hover:shadow-xl transition">
+                        <img :src="tech.logo" :alt="tech.name" class="w-auto h-10 md:h-14 mx-auto mb-3 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.6)] transition"/>
                         <p class="text-[var(--color-textTitle)] font-medium text-sm">{{ tech.name }}</p>
                     </div>
                 </div>
