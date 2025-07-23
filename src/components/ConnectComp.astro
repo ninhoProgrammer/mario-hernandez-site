@@ -1,5 +1,6 @@
 ---
-import  SocialNetworks  from './SocialNetworks.astro';
+import SocialNetworks from './SocialNetworks.astro';
+import Emailjs from './emailjs.vue';
 ---
 
 <section class="flex flex-col md:flex-row items-center justify-center min-h-screen px-6 relative overflow-hidden py-16 z">
@@ -20,23 +21,9 @@ import  SocialNetworks  from './SocialNetworks.astro';
     </div>
     
     <!-- Right Form Panel -->
-    <div class="bg-[#e92210] p-10 md:w-1/2 rounded-b-3xl md:rounded-r-3xl md:rounded-bl-none text-sm text-gray-800 shadow-lg pr-10">
-        <h2 class="text-2xl font-bold mb-8 text-white">Send email</h2>
-    
-        <form action="#" method="POST" class="space-y-6">
-            <div>
-                <input type="text" placeholder="Enter your Name" class="w-full border-b-2 p-1 border-gray-400 focus:outline-none focus:border-gray-500 py-2 placeholder-gray-500" required>
-            </div>
-            <div>
-                <input type="email" placeholder="Enter a valid email address" class="w-full border-b-2 p-1 border-gray-400 focus:outline-none focus:border-[#e92210] py-2 placeholder-gray-500" required>
-            </div>
-            <div>
-                <textarea rows="4" placeholder="Your Message" class="w-full border-b-2 p-1 border-gray-400 focus:outline-none focus:border-[#e92210] py-2 placeholder-gray-500" required></textarea>
-            </div>
-            <button type="submit" class="inline-block px-6 py-2 border-2 text-white border-white rounded-full hover:bg-[#e92210] hover:text-gray-500 hover:border-white font-bold transition-all">
-                Send
-            </button>
-        </form>
+    <div class="bg-[var(--color-primary)] p-10 md:w-1/2 rounded-b-3xl md:rounded-r-3xl md:rounded-bl-none text-sm text-gray-800 shadow-lg pr-10">
+        <h2 class="text-2xl font-bold mb-8 text-[var(--color-accent)]">Send email</h2>
+        <Emailjs client:load />
     </div>
       
 </section>
