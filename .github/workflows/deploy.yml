@@ -38,9 +38,12 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          npm install -g vercel
-          # Opcional: usar --prod para despliegue en producción
-          vercel --token="$VERCEL_TOKEN" --confirm --prod
+            if [ -z "$VERCEL_TOKEN" ]; then
+              echo "❌ VERCEL_TOKEN is not set. Skipping deploy."
+              exit 1
+            fi
+            npm install -g vercel
+            vercel --token="$VERCEL_TOKEN" --confirm --prod
 
       - name: Ping Google with sitemap
         run: |
