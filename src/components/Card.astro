@@ -10,29 +10,19 @@ interface Props {
 const { href, title, text, img, pick } = Astro.props;
 ---
 
-<article class="relative group flex flex-col text-xs text-[var(--color-accent)] max-w-sm w-auto md:w-full p-5 rounded-2xl bg-[var(--color-primary)] backdrop-blur-md border border-[var(--color-accent)] shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 overflow-hidden">
-    <!-- Imagen destacada -->
-    <div class="relative md:overflow-hidden justify-items-center rounded-xl">
-        <img src={img} alt={title} class="w-auto h-32  md:w-full md:h-44 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105" />
+
+<div class="max-w-sm mx-auto p-10 md:p-0" >
+    <img class="w-full h-48 object-cover overflow-hidden -skew-y-4" src={img} alt="Perfil">
+    
+    <div class="p-4 text-center -mt-2 h-36 bg-[var(--color-accent)] ">
+        <h1 class="text-base md:text-lg text-[var(--color-textTitle)] font-semibold">{title}</h1>
+        <p class="text-xs md:text-sm text-[var(--color-text)]">{text}</p>
+       
     </div>
 
-    <!-- Contenido -->
-    <div class="mt-4 w-auto h-24 ">
-        <h2 class="text-xl font-bold">{title}</h2>
-        <p class="mt-2 leading-relaxed">{text}</p>
-    </div>
-
-    <!-- Footer -->
-    <div class="mt-4 flex justify-between text-center items-center">
-        <div class="z-10">
-        </div>
-        <div class="absolute flex items-center bg-[var(--color-secondary)] w-20 h-20 mt-5 -ml-5 rounded-tr-full px-3 z-0">
-            
-        </div>
-
-        <a href={href} class=" bg-[var(--color-secondary)] w-40 px-5 py-4 rounded-lg transition-all hover:bg-blue-900 hover:scale-105">
-            View →
+    <div class="md:absolute w-auto md:w-96 bg-[var(--color-primary)] text-white text-center -mt-2 py-2 -skew-y-4">
+        <a href={href} class=" bg-[var(--color-primary)] px-2 py-2  transition-all hover:bg-blue-900 hover:scale-105">
+           View more →
         </a>
     </div>
-</article>
-
+</div>
