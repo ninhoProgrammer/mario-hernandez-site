@@ -12,15 +12,15 @@ const { href, title, text, img, pick } = Astro.props;
 
 
 <div class="max-w-sm mx-auto p-10 md:p-0" >
-    <img class="w-full h-48 object-cover overflow-hidden -skew-y-4" src={img} alt="Perfil">
+    <img class="w-full h-48 object-cover overflow-hidden -skew-y-2" src={img} alt="Perfil">
     
     <div class="p-4 text-center -mt-2 h-36 bg-[var(--color-accent)] ">
-        <h1 class="text-base md:text-lg text-[var(--color-textTitle)] font-semibold">{title}</h1>
+        <h2 class="text-base md:text-lg text-[var(--color-textTitle)] font-semibold">{title}</h2>
         <p class="text-xs md:text-sm text-[var(--color-text)]">{text}</p>
        
     </div>
 
-    <div class="md:absolute w-auto md:w-96 bg-[var(--color-primary)] text-white text-center -mt-2 py-2 -skew-y-4">
+    <div class="md:absolute w-auto md:w-96 bg-[var(--color-primary)] text-white text-center -mt-4 py-2 -skew-y-2">
         <a href={href} class=" bg-[var(--color-primary)] px-2 py-2  transition-all hover:bg-blue-900 hover:scale-105">
            View more →
         </a>
