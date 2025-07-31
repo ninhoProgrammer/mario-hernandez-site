@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mario-hernandez-site.vercel.app/sitemap-index.xml
