@@ -2,7 +2,7 @@
     <h1 style="font-size: 3em; font-weight: bold; margin: 20px 0;">MakeWeb</h1>
 </div>
 
-![banner](https://raw.githubusercontent.com/MakeWebMX/MakeWebPrincipal/refs/heads/main/public/Hero.webp)
+![banner](https://raw.githubusercontent.com/ninhoProgrammer/mario-hernandez-site/refs/heads/main/public/Hero.webp)
 
 Main page of MakeWeb developed with Astro 5, TailWind, and Three.js
 
