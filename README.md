@@ -2,7 +2,7 @@
     <h1 style="font-size: 3em; font-weight: bold; margin: 20px 0;">MakeWeb</h1>
 </div>
 
-![banner](https://raw.githubusercontent.com/MakeWebMX/MakeWebPrincipal/refs/heads/main/public/MakeWeb%20-%20Hero.webp)
+![banner](https://raw.githubusercontent.com/ninhoProgrammer/mario-hernandez-site/refs/heads/main/public/Hero.webp)
 
 Main page of MakeWeb developed with Astro 5, TailWind, and Three.js
 
@@ -16,6 +16,7 @@ Main page of MakeWeb developed with Astro 5, TailWind, and Three.js
 **[Vue](https://vuejs.org/)** is an approachable, performant and versatile framework for building web user interfaces.
 **[React](https://react.dev/)** is a the library for web and native user interfaces
 
+<h2>License</h2>
 
 <h2>Contact Me</h2>
 <a href="https://www.linkedin.com/in/it-mario-hernández/"><img width="64" height="64" src="https://img.icons8.com/arcade/64/linkedin-circled.png" alt="linkedin-circled"/></a>
