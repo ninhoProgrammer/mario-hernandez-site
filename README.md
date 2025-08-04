@@ -2,7 +2,7 @@
     <h1 style="font-size: 3em; font-weight: bold; margin: 20px 0;">MakeWeb</h1>
 </div>
 
-![banner](https://raw.githubusercontent.com/MakeWebMX/MakeWebPrincipal/refs/heads/main/public/MakeWeb%20-%20Hero.webp)
+![banner](https://raw.githubusercontent.com/MakeWebMX/MakeWebPrincipal/refs/heads/main/public/Hero.webp)
 
 Main page of MakeWeb developed with Astro 5, TailWind, and Three.js
 
@@ -16,11 +16,6 @@ Main page of MakeWeb developed with Astro 5, TailWind, and Three.js
 
 <h2>License</h2>
 
-Copyright (c) 2024  Designed & Developed [MakeWeb](https://github.com/MakeWebMX)
-
-Please contact [Mario](https://www.linkedin.com/in/it-mario-hernández/) if you would like to reuse any part of this site for personal or commercial use.
-
-
 <h2>Contact Me</h2>
 <a href="https://www.linkedin.com/in/it-mario-hernández/"><img width="64" height="64" src="https://img.icons8.com/arcade/64/linkedin-circled.png" alt="linkedin-circled"/></a>
 
@@ -29,5 +24,9 @@ Please contact [Mario](https://www.linkedin.com/in/it-mario-hernández/) if you 
 There are comments in Spanish; you can send a message for more information.
 
 <h2>License</h2>
+
+Copyright (c) 2024  Designed & Developed [MakeWeb](https://github.com/MakeWebMX)
+
+Copyright (c) 2024  Designed & Developed [MakeWeb](https://github.com/MakeWebMX)
 
 This project is licensed under the terms of the MIT License. See the [MIT License](LICENSE)
