@@ -13,12 +13,8 @@ Main page of MakeWeb developed with Astro 5, TailWind, and Three.js
 **[Astro 5](https://astro.build)** is a modern static site generator that allows you to build fast and optimized websites.  
 **[Three.js](https://threejs.org)** is a JavaScript library that enables the creation of 3D graphics in the browser using WebGL.  
 **[TailWind](https://tailwindcss.com)** is a utility-first CSS framework, providing a highly customizable and efficient way to style your web applications.
-
-<h2>License</h2>
-
-Copyright (c) 2024  Designed & Developed [MakeWeb](https://github.com/MakeWebMX)
-
-Please contact [Mario](https://www.linkedin.com/in/it-mario-hernández/) if you would like to reuse any part of this site for personal or commercial use.
+**[Vue](https://vuejs.org/)** is an approachable, performant and versatile framework for building web user interfaces.
+**[React](https://react.dev/)** is a the library for web and native user interfaces
 
 
 <h2>Contact Me</h2>
@@ -29,5 +25,9 @@ Please contact [Mario](https://www.linkedin.com/in/it-mario-hernández/) if you 
 There are comments in Spanish; you can send a message for more information.
 
 <h2>License</h2>
+
+Copyright (c) 2024  Designed & Developed [MakeWeb](https://github.com/MakeWebMX)
+
+Please contact [Mario](https://www.linkedin.com/in/it-mario-hernández/) if you would like to reuse any part of this site for personal or commercial use.
 
 This project is licensed under the terms of the MIT License. See the [MIT License](LICENSE)
