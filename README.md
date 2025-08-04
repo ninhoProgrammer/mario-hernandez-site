@@ -3,6 +3,7 @@
 </div>
 
 ![banner](https://raw.githubusercontent.com/ninhoProgrammer/mario-hernandez-site/refs/heads/main/public/Hero.webp)
+![banner](https://raw.githubusercontent.com/ninhoProgrammer/mario-hernandez-site/refs/heads/main/public/Hero.webp)
 
 This page is my portfolio create with tecnologies that I master such as Astro, Vue, React, tailwind and three.js
 
