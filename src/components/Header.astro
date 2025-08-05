@@ -1,45 +1,36 @@
-<header class="flex flex-grow bg-opacity-15 shadow-md items-center w-full fixed top-0 justify-between z-40 text-[var(--color-accent)] md:text-sm 2xl:text-xl" >
-    <div class="flex flex-grow justify-start basis-0 pl-5">
+<header class="flex items-center justify-between w-full fixed top-0 z-40 bg-opacity-15 shadow-md text-[var(--color-accent)] md:text-sm 2xl:text-xl px-5">
+    <!-- Logo -->
+    <div class="flex items-center">
         <a href="/">
-            <img class="w-10 h-10 xl:w-12 sm:h-12" src="/MakeWeb_MM.svg" alt="MakeWeb Logo" />
+            <img class="w-10 h-10 xl:w-12 xl:h-12" src="/MakeWeb_MM.svg" alt="MakeWeb Logo" />
         </a>
     </div>
-    
-    <div id="menu" class="lg:flex sm:flex-col hidden lg:flex-grow lg:basis-4">
-        <ul class="flex justify-center [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:py-1 ">
-            <li><a class="hover:rounded-lg hover:text-[var(--color-secondary)] hover:bg-[var(--color-accent)] hover:underline decoration-[var(--color-secondary)]" href="/">Home</a></li>
-            <li><a class="hover:rounded-lg hover:text-[var(--color-secondary)] hover:bg-[var(--color-accent)] hover:underline decoration-[var(--color-secondary)]" href="/aboutme">About Me</a></li>
-            <li><a class="hover:rounded-lg hover:text-[var(--color-secondary)] hover:bg-[var(--color-accent)] hover:underline decoration-[var(--color-secondary)]" href="/skills">Skills</a></li>
-            <li><a class="hover:rounded-lg hover:text-[var(--color-secondary)] hover:bg-[var(--color-accent)] hover:underline decoration-[var(--color-secondary)]" href="/tecnologies">Technologies</a></li>
-        </ul>
-    </div>
-    <div id="menu" class="lg:flex hidden flex-grow justify-end basis-5 pr-5">
-        <ul class="flex [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:py-1 bg-[var(--color-accent)] rounded-lg text-[var(--color-secondary)]">
-            <li><a class="hover:rounded-lg hover:text-[var(--color-accent)] hover:bg-[var(--color-secondary)] hover:underline decoration-[var(--color-accent)]" href="/connect">Connect</a></li>
-        </ul>
-    </div>
 
-    <div id="menu" class="menu flex lg:hidden justify-end" onclick="openMenu()">
-        <svg  
-            xmlns="http://www.w3.org/2000/svg"  
-            width="35"  
-            height="35"  
-            viewBox="0 0 24 24"  
-            fill="currentColor"  
-            stroke="currentColor"  
-            stroke-width="2"  
-            stroke-linecap="round"  
-            stroke-linejoin="round"  
-            class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
-            <path 
-            stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" />
-            <path  d="M4 12l16 0" /><path d="M4 18l16 0" />
+    <!-- Botón hamburguesa -->
+    <button class="lg:hidden ml-2 p-2 rounded bg-[var(--color-tertiary)] hover:text-[var(--color-primary)]" onclick="window.openMenu()" aria-label="Abrir menú">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
-    </div>
+    </button>
+
+    <!-- Menú -->
+    <nav id="main-menu" class="hidden absolute top-full left-0 w-full bg-[var(--color-accent)] md:bg-transparent text-[var(--color-text)] md:text-[var(--color-accent)] z-50 flex-col lg:flex lg:flex-row lg:static lg:w-auto lg:items-center lg:gap-6 space-y-2 lg:space-y-0">
+        <ul class="flex flex-col lg:flex-row w-full lg:w-auto [&>li>a]:px-4 [&>li>a]:py-2">
+            <li><a class="hover:underline hover:text-[var(--color-secondary)]" href="/">Home</a></li>
+            <li><a class="hover:underline hover:text-[var(--color-secondary)]" href="/aboutme">About Me</a></li>
+            <li><a class="hover:underline hover:text-[var(--color-secondary)]" href="/skills">Skills</a></li>
+            <li><a class="hover:underline hover:text-[var(--color-secondary)]" href="/tecnologies">Technologies</a></li>
+            
+        </ul>
+
+        <ul class="flex flex-col lg:flex-row w-full lg:w-auto [&>li>a]:px-4 [&>li>a]:py-2">
+            <li class="lg:ml-auto"><a class="hover:underline text-[var(--color-accent) md:bg-[var(--color-secondary)] rounded-lg px-2 py-1 md:px-4 md:py-2" href="/connect">Connect</a></li>
+        </ul>
+    </nav>
     
 </header>
+
 <script>
-    // Extend the Window interface to include openMenu
     declare global {
         interface Window {
             openMenu: () => void;
@@ -47,19 +38,33 @@
     }
 
     function openMenu() {
-        console.log('openMenu');
-        let menu = document.getElementById('menu');
-        if(menu) {
-            if(menu.classList.contains('hidden')) {
-            menu.classList.remove('hidden');
-            menu.classList.add('flex', 'flex-col'); // Add flex-col for vertical layout
-            } else {
+        const menu = document.getElementById('main-menu');
+        if (!menu) return;
+
+        const isVisible = !menu.classList.contains('hidden');
+
+        if (isVisible) {
             menu.classList.add('hidden');
-            menu.classList.remove('flex', 'flex-col'); // Remove flex-col when hiding
-            }
+            menu.classList.remove('flex');
+            document.removeEventListener('click', closeMenuOnOutsideClick);
+        } else {
+            menu.classList.remove('hidden');
+            menu.classList.add('flex');
+            setTimeout(() => {
+                document.addEventListener('click', closeMenuOnOutsideClick);
+            }, 0); // Evita que se cierre inmediatamente por el mismo click del botón
         }
     }
 
-    // Attach the function to the global window object
+    function closeMenuOnOutsideClick(e: MouseEvent) {
+        const menu = document.getElementById('main-menu');
+        const button = (e.target as HTMLElement)?.closest('button[aria-label="Abrir menú"]');
+        if (menu && !menu.contains(e.target as Node) && !button) {
+            menu.classList.add('hidden');
+            menu.classList.remove('flex');
+            document.removeEventListener('click', closeMenuOnOutsideClick);
+        }
+    }
+
     window.openMenu = openMenu;
 </script>
