@@ -14,7 +14,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="../MakeWeb_MM.svg"/>
 		<title>{title}</title>
 	</head>
-	<body class="bg-[url('/blue-sky-background.webp')] bg-fixed bg-[var(--color-secondary)] md:overflow-hidden">
+	<body class="bg-[url('/blue-sky-background.webp')] bg-fixed bg-cover bg-[var(--color-secondary)] md:overflow-hidden">
 		<Header />
 		<Island />
 		<slot />
