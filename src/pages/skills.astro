@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Skill from '../components/Skill.jsx';
+import Skill from '../components/Skill.vue';
 ---
 
 <Layout title="Skills">
-    <Skill client:only="react" />
+     <Skill client:visible />
 </Layout>
