@@ -74,7 +74,7 @@ const titleVariant = {
   show: { x: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } }
 };
 
-export default function SkillNoIcons() {
+export default function Skill() {
   return (
     <main>
       <motion.section id="skills" className="max-w-6xl pt-20 px-4 mx-auto" variants={container} initial="hidden" animate="show">
