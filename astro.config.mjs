@@ -2,11 +2,12 @@ import { defineConfig } from 'astro/config';
 import vue from '@astrojs/vue';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
+import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
   site: 'https://mario-hernandez-site.vercel.app',
   integrations: [sitemap(), tailwind(), vue()],
-  vite: {
+  vite: { // This should be a direct property of defineConfig
     build: {
       rollupOptions: {
         output: {
