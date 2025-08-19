@@ -1,7 +1,6 @@
 ---
 import Header from '../components/Header.astro';
 import Island from '../components/Island.astro';
-import Analytics from '@vercel/analytics/astro';
 import '../styles/global.css';
 const { title } = Astro.props;
 ---
@@ -13,7 +12,6 @@ const { title } = Astro.props;
 		<meta name="description" content="Discover the portfolio of Mario Hernández Martínez, a skilled software and web developer building modern applications for businesses and individuals." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="../MakeWeb_MM.svg"/>
-		<Analytics />
 		<title>{title}</title>
 	</head>
 	<body class="bg-[url('/blue-sky-background.webp')] bg-fixed bg-cover bg-[var(--color-secondary)] md:overflow-hidden">

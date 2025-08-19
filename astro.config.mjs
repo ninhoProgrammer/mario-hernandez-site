@@ -7,11 +7,6 @@ import vercel from '@astrojs/vercel/serverless';
 export default defineConfig({
   site: 'https://mario-hernandez-site.vercel.app',
   integrations: [sitemap(), tailwind(), vue()],
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
   vite: { // This should be a direct property of defineConfig
     build: {
       rollupOptions: {
