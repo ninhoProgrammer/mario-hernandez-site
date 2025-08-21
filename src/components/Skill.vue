@@ -40,11 +40,11 @@ onMounted(() => {
 <template>
   <section class="py-12">
     <h2 class="text-3xl font-bold text-center mb-8 w-full -skew-y-2 bg-[var(--color-primary)] text-[var(--color-accent)]">Skills</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto -skew-y-2">
       <div
         v-for="(skill, index) in visibleSkills"
         :key="index"
-        class="p-6 bg-white/80 border rounded-lg shadow-md flex flex-col items-center text-center transition-all duration-300 ease-in-out opacity-0 animate-fade-in-up"
+        class="p-6 bg-white/80  border rounded-lg shadow-md flex flex-col items-center text-center transition-all duration-300 ease-in-out opacity-0 animate-fade-in-up"
       >
         <component :is="skill.icon" />
         <h3 class="mt-4 text-xl font-semibold">{{ skill.title }}</h3>
