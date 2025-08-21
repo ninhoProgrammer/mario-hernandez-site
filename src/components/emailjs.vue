@@ -55,13 +55,9 @@
             {{ errorMsg }}
         </div>
         
-        <div>
-            <input v-model="name" type="text" placeholder="Name" class="w-full border-b-2 p-1 border-gray-400 focus:outline-none focus:border-gray-500 py-2 placeholder-gray-500" required />
-        </div>
-        
-        <div>
-            <input v-model="email" type="email" placeholder="Email" class="w-full border-b-2 p-1 border-gray-400 focus:outline-none focus:border-[var(--color-primary)] py-2 placeholder-gray-500" required />
-        </div>
+        <input v-model="name" type="text" placeholder="Name" class="w-full border-b-2 p-1 border-gray-400 focus:outline-none focus:border-gray-500 py-2 placeholder-gray-500" required />
+       
+        <input v-model="email" type="email" placeholder="Email" class="w-full border-b-2 p-1 border-gray-400 focus:outline-none focus:border-[var(--color-primary)] py-2 placeholder-gray-500" required />
 
         <div>
             <textarea v-model="message" rows="4" placeholder="Message" class="w-full border-b-2 p-1 border-gray-400 focus:outline-none focus:border-[var(--color-primary)] py-2 placeholder-gray-500" required>
@@ -69,7 +65,7 @@
             </textarea>
         </div>
 
-        <button type="submit" :disabled="isLoading" class="inline-flex items-center px-6 py-2 border-2 text-[var(--color-accent)] border-[var(--color-accent)] rounded-full hover:bg- hover:text-gray-500 hover:border-[var(--color-accent)] font-bold transition-all disabled:opacity-50">
+        <button type="submit" :disabled="isLoading" class=" px-4 text-[var(--color-accent)] py-2 bg-[var(--color-secondary)] -skew-y-2 flex hover:underline hover:bg-[var(--color-text)] hover:scale-105 ">
             <span v-if="isLoading">Enviando...</span>
             <span v-else>Enviar</span>
         </button>
