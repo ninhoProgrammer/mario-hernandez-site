@@ -99,7 +99,7 @@
     
 
     function scrollToSection(index: number ) {
-        if (index >= 0 && index < 6) {
+        if (index >= 0 && index < 7) {
             console.log(index);
 			currentIndex = index;
             if (index == 0) {
@@ -135,6 +135,10 @@
                     break;  
                 case 5:
                     moveOBJ(0, -400); 
+                    rotation = 0;
+                    break;
+                case 6:
+                    moveOBJ(0, -1200); 
                     rotation = 0;
                     break;
             }

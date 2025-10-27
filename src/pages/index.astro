@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
+import MyProyects from '../components/MyProyects.astro';
 
 ---
 
@@ -25,6 +26,10 @@ import Hero from '../components/Hero.astro';
 		
 		<section class="section md:px-2 h-screen w-screen flex justify-center md:justify- items-center z-36">
 			<Card title="Connect" text="If you want to connect, feel free to reach out through the contact form or follow me on social media." img="../desiert.webp" pick="" href="/connect" />	
+		</section>
+
+		<section class="section mt-3 px-6 md:px-0 h-screen w-screen flex justify-center items-center z-36">
+			<MyProyects />
 		</section>
 		
 		<section class="section h-screen w-screen text-center overflow-hidden translate-y-0">
