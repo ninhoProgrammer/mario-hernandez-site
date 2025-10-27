@@ -1,0 +1,15 @@
+---
+// Importa tu componente de Vue
+import CarouselSlider from '../components/CarouselSlider.vue'; 
+
+---
+
+<section class="w-full -skew-y-2 p-4">
+    <div class="absolute inset-0 bg-cover bg-center bg-[var(--color-primary)]">  
+        <h2 class="text-4xl md:text-5xl font-bold text-white p-4 mb-4">My Projects</h2>      
+    </div>
+    
+    <CarouselSlider client:load /> 
+    
+    
+</section>
