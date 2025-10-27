@@ -1,5 +1,5 @@
 <template>
-    <section class="my-16 px-6 max-w-6xl mx-auto text-center">
+    <section class="mt-24 md:mt-16 py-4 md:py-16 px-4 md:px-16 max-w-6xl mx-auto text-center">
         <h2 class="text-2xl md:text-4xl font-bold mb-6 bg-[var(--color-secondary)] w-full -skew-y-2 text-[var(--color-accent)] inline-block px-4 py-2">
             <span class="typed-text inline-block border-r-2 border-[var(--color-secondary)]  animate-blink">{{ animatedText }}</span>
         </h2>
@@ -8,7 +8,11 @@
             <div class="flex transition-transform  duration-700 ease-in-out" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
                 <div v-for="(group, i) in techGroups" :key="i" class="min-w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 px-4">
                     <div v-for="tech in group" :key="tech.name" class="bg-white/80 backdrop-blur-lg shadow-md rounded-xl p-4 md:p-6 hover:scale-105 hover:shadow-xl transition">
-                        <img :src="tech.logo" :alt="tech.name" class="w-auto h-10 md:h-14 mx-auto mb-3 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.6)] transition"/>
+                        <img 
+                            :src="tech.logo" 
+                            :alt="tech.name" 
+                            class="w-auto h-10 md:h-14 mx-auto mb-3 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.6)] transition"
+                        />
                         <p class="text-[var(--color-textTitle)]  font-medium text-sm">{{ tech.name }}</p>
                     </div>
                 </div>
@@ -16,13 +20,19 @@
 
             <!-- Controles -->
             <div class="absolute top-1/2 left-0 transform -translate-y-1/2">
-                <button @click="prev" class="bg-[var(--color-accent)] p-4 rounded-full hover:bg-[var(--color-secondary)]blue-500 hover:text-[var(--color-accent)]">
-                    <
+                <button 
+                    @click="prev" 
+                    class="bg-[var(--color-accent)] p-4 rounded-full hover:scale-110 hover:bg-[var(--color-secondary)] hover:text-[var(--color-accent)] transition"
+                >
+                    &lt;
                 </button>
             </div>
             <div class="absolute top-1/2 right-0 transform -translate-y-1/2">
-                <button @click="next" class="bg-[var(--color-accent)] p-4 rounded-full hover:bg-[var(--color-secondary)] hover:text-[var(--color-accent)]">
-                    >
+                <button 
+                    @click="next" 
+                    class="bg-[var(--color-accent)] p-4 rounded-full hover:scale-110 hover:bg-[var(--color-secondary)] hover:text-[var(--color-accent)] transition"
+                >
+                    &gt;
                 </button>
             </div>
         </div>

@@ -38,7 +38,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <section class="py-12">
+    <section class="py-12 my-16">
         <h2 class="text-3xl font-bold text-center mb-8 w-full -skew-y-2 bg-[var(--color-primary)] text-[var(--color-accent)]">Skills</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto -skew-y-2">
             <div
@@ -53,7 +53,7 @@ onMounted(() => {
         </div>
     </section>
 
-    <footer class="text-center py-10 text-sm text-gray-400">
+    <footer class="text-center py-10 text-sm text-white">
         <p>Thank you for visiting my portfolio! 👨‍💻</p>
         <p class="mt-2">&copy; 2025 Mario Hernández</p>
     </footer>
