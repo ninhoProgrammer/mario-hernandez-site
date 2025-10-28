@@ -18,7 +18,7 @@
             description: 'Design invitations: where creativity comes to life. Discover how we transform ideas into captivating visual experiences.',
             circleColor: 'bg-blue-500 hover:bg-blue-600',
             image: '../wedding.webp', 
-            url: '/proyecto/diseno',
+            url: 'https://invitacionbodafya.vercel.app',
         },
 
         {
@@ -57,23 +57,23 @@
 </script>
 
 <template>
-    <div class="relative w-full h-[420px] md:h-[510px] overflow-hidden">
+    <div class="relative w-full h-[420px] md:h-[460px] overflow-hidden">
         <Transition name="slide-fade" mode="out-in">
             <div 
                 :key="currentSlide.id"
-                class="absolute inset-0 p2 md:p-10 flex flex-col justify-end transition-all duration-700 ease-in-out bg-cover bg-center"
+                class="absolute inset-0 p-2 md:p-10 flex flex-col justify-end transition-all duration-700 ease-in-out bg-cover bg-center"
                 :style="{ backgroundImage: `url(${currentSlide.image})` }"
             >
                 <div class="absolute inset-0 bg-black/40"></div>
 
                 <div class="relative w-full h-full flex flex-col justify-between">
-                    <div class="absolute md:top-0 md:right-0 p-4 bg-white/20 backdrop-blur-sm text-white max-w-sm rounded-lg text-center md:text-right">
+                    <div class="absolute md:top-0 md:right-0 p-4 bg-white/50 backdrop-blur-sm text-bg-[var(----color-accent)] max-w-sm rounded-lg text-center md:text-right">
                         <p class="text-xs md:text-base font-medium">{{ currentSlide.description }}</p>
                     </div>
 
                     <div class="absolute bottom-1 md:bottom-0 left-0 right-0 p-6 md:p-4 flex justify-between items-end space-x-4">
                         
-                        <div class="p-4 bg-black/50 backdrop-blur-sm text-white max-w-sm rounded-lg z-10">
+                        <div class="p-4 bg-black/50 backdrop-blur-sm text-[var(--color-accent)] max-w-sm rounded-lg z-10">
                             <p class="text-xs md:text-base font-bold">{{ currentSlide.text }}</p>
                         </div>
 
@@ -124,13 +124,13 @@
 </template>
 
 <style>
-/* ... (Mismo código de las transiciones 'slide-fade' ) ... */
-.slide-fade-enter-active { transition: all 0.5s ease-out; }
-.slide-fade-leave-active { 
-    transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
-    position: absolute; 
-    width: 100%;
-}
-.slide-fade-enter-from { transform: translateX(100%); opacity: 0; }
-.slide-fade-leave-to { transform: translateX(-100%); opacity: 0; }
+    /* ... (Mismo código de las transiciones 'slide-fade' ) ... */
+    .slide-fade-enter-active { transition: all 0.5s ease-out; }
+    .slide-fade-leave-active { 
+        transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+        position: absolute; 
+        width: 100%;
+    }
+    .slide-fade-enter-from { transform: translateX(100%); opacity: 0; }
+    .slide-fade-leave-to { transform: translateX(-100%); opacity: 0; }
 </style>

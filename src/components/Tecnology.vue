@@ -1,10 +1,10 @@
 <template>
-    <section class="mt-24 md:mt-16 py-4 md:py-16 px-4 md:px-16 max-w-6xl mx-auto text-center">
-        <h2 class="text-2xl md:text-4xl font-bold mb-6 bg-[var(--color-secondary)] w-full -skew-y-2 text-[var(--color-accent)] inline-block px-4 py-2">
+    <section class="my-20 md:my-10 py-4 md:py-16  text-center">
+        <h2 class="relative text-3xl font-bold text-center mb-8 w-full -skew-y-2 bg-[var(--color-secondary)] text-[var(--color-accent)]">
             <span class="typed-text inline-block border-r-2 border-[var(--color-secondary)]  animate-blink">{{ animatedText }}</span>
         </h2>
 
-        <div class="relative -skew-y-2 overflow-hidden">
+        <div class="w-3/4 -skew-y-2 mx-auto relative overflow-hidden">
             <div class="flex transition-transform  duration-700 ease-in-out" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
                 <div v-for="(group, i) in techGroups" :key="i" class="min-w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 px-4">
                     <div v-for="tech in group" :key="tech.name" class="bg-white/80 backdrop-blur-lg shadow-md rounded-xl p-4 md:p-6 hover:scale-105 hover:shadow-xl transition">
@@ -13,7 +13,7 @@
                             :alt="tech.name" 
                             class="w-auto h-10 md:h-14 mx-auto mb-3 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.6)] transition"
                         />
-                        <p class="text-[var(--color-textTitle)]  font-medium text-sm">{{ tech.name }}</p>
+                        <p class="text-[var(--color-textTitle)] font-medium text-sm">{{ tech.name }}</p>
                     </div>
                 </div>
             </div>
@@ -52,26 +52,26 @@
     let typingSpeed = 100;
 
     const type = () => {
-    const current = phrases[currentPhrase];
-    
-    if (isDeleting) {
-        animatedText.value = current.substring(0, animatedText.value.length - 1);
-        typingSpeed = 50;
-    } else {
-        animatedText.value = current.substring(0, animatedText.value.length + 1);
-        typingSpeed = 100;
-    }
+        const current = phrases[currentPhrase];
+        
+        if (isDeleting) {
+            animatedText.value = current.substring(0, animatedText.value.length - 1);
+            typingSpeed = 50;
+        } else {
+            animatedText.value = current.substring(0, animatedText.value.length + 1);
+            typingSpeed = 100;
+        }
 
-    if (!isDeleting && animatedText.value === current) {
-        typingSpeed = 1500;
-        isDeleting = true;
-    } else if (isDeleting && animatedText.value === '') {
-        isDeleting = false;
-        currentPhrase = (currentPhrase + 1) % phrases.length;
-        typingSpeed = 500;
-    }
+        if (!isDeleting && animatedText.value === current) {
+            typingSpeed = 1500;
+            isDeleting = true;
+        } else if (isDeleting && animatedText.value === '') {
+            isDeleting = false;
+            currentPhrase = (currentPhrase + 1) % phrases.length;
+            typingSpeed = 500;
+        }
 
-    setTimeout(type, typingSpeed);
+        setTimeout(type, typingSpeed);
     };
 
     onMounted(() => {
