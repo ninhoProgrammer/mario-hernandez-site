@@ -1,43 +1,39 @@
 ---
 import Header from '../components/Header.astro';
 import Island from '../components/Island.astro';
+
 import '../styles/global.css';
-const { title } = Astro.props;
+const { title, mdOverflow = false } = Astro.props;
+// Build body classes dynamically: use `md:overflow-hidden` when mdOverflow is true,
+// otherwise use `overflow-hidden`.
+const bodyClasses = `bg-[url('/blue-sky-background.webp')] bg-fixed bg-cover bg-[var(--color-secondary)] ${mdOverflow ? 'md:overflow-hidden' : 'overflow-hidden'}`;
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Discover the portfolio of Mario Hernández Martínez, a skilled software and web developer building modern applications for businesses and individuals." />
+		<meta name="description" content="Discover the portfolio of Mario Hernández Martínez, Software Developer with experience in creating robust and scalable applications using modern and cutting-edge tools, and secure web software deployment. Focused on offering creative solutions to technical problems, I enjoy collaborating in teams to develop intuitive software that meets end-user needs. My portfolio demonstrates projects ranging from .NET to Astro, including C# desktop developments and API consumption." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="../MakeWeb_MM.svg"/>
 		<title>{title}</title>
 	</head>
-	<body class="bg-[url('/blue-sky-background.webp')] bg-fixed bg-cover bg-[var(--color-secondary)] overflow-hidden">
+	<body class={bodyClasses}>
 		<Header />
 		<Island />
 		<slot />
-		<!-- Botones de navegación (solo visibles en móvil) -->
-		<div class="fixed right-4 bottom-0 -translate-y-1/2 flex flex-col gap-2 md:hidden z-50">
-			<button id="prevSection" class="bg-[var(--color-primary)] backdrop-blur-md p-3 rounded-t-full text-[var(--color-accent)] text-sm shadow-lg hover:scale-110 transition z-50">
-				↑
-			</button>
-			<button id="nextSection" class="bg-[var(--color-primary)] backdrop-blur-md p-3 rounded-b-full text-[var(--color-accent)] text-sm shadow-lg hover:scale-110 transition z-50">
-				↓
-			</button>
-		</div>
+        
 	</body>
-	
-	
+    
+    
 </html>
 
 
 <style is:global>
-    html {
+	html {
 		font-family: Kepler-296, 'Kepler 296', sans-serif;
 		font-size: 16px;
 	}
 
-	
+    
 </style>
