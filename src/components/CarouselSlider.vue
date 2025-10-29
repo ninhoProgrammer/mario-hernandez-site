@@ -57,7 +57,7 @@
 </script>
 
 <template>
-    <div class="relative w-full h-[420px] md:h-[460px] overflow-hidden">
+    <div class="relative w-full h-[420px] md:h-[460px] 2xl:h-[680px] overflow-hidden">
         <Transition name="slide-fade" mode="out-in">
             <div 
                 :key="currentSlide.id"
