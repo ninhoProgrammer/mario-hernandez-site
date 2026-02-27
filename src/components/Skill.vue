@@ -60,7 +60,7 @@
     </section>
 
     <footer class="relative bg-gradient-to-r buttom-0 text-[var(--color-accent)] py-4 mt-0 md:mt-16 px-1 overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,red,transparent_70%)] animate-pulse"></div>
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,darkorange,transparent_70%)] animate-pulse"></div>
 
         <div class="relative z-10 flex flex-col items-center space-y-1 md:space-y-2 text-center">
             <p class="text-sm font-semibold tracking-wide">
