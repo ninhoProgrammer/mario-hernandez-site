@@ -1,8 +1,12 @@
+---
+import Logo from '../components/Logo.astro';
+---
+
 <header class="flex items-center justify-between w-full fixed top-0 z-40 bg-[var(--color-accent)] md:bg-transparent text-[var(--color-textTitle)] md:text-[var(--color-accent)] bg-opacity-5 shadow-md md:text-sm 2xl:text-xl px-5">
     <!-- Logo -->
     <div class="items-center">
         <a href="/">
-            <img class="w-10 h-10 xl:w-12 xl:h-12" src="/MakeWeb_MM.svg" alt="MakeWeb Logo" />
+            <Logo>
         </a>
     </div>
 
@@ -16,13 +20,13 @@
     <!-- Menú -->
     <nav id="main-menu" class="hidden absolute top-full left-0 w-full bg-[var(--color-accent)] md:bg-transparent text-[var(--color-accent)] md:text-[var(--color-text)] z-50 flex-col lg:flex lg:flex-row lg:static lg:w-auto lg:items-center lg:gap-6">
         <ul class="flex flex-col lg:flex-row w-full lg:w-auto p-2 md:p-0 space-y-2 md:space-y-0">
-            <li class="px-4 py-2 -skew-y-2 bg-[var(--color-secondary)] md:bg-transparent flex flex-grow hover:bg-transparent"><a class="px-1 py-1 md:bg-transparent flex flex-grow hover:underline hover:bg-[var(--color-text)] md:hover:text-[var(--color-accent)] hover:scale-105 " href="/">Home</a></li>
-            <li class="px-4 py-2 -skew-y-2 bg-[var(--color-secondary)] md:bg-transparent flex flex-grow hover:bg-transparent"><a class="px-1 py-1 md:bg-transparent flex flex-grow hover:underline hover:bg-[var(--color-text)] md:hover:text-[var(--color-accent)] hover:scale-105 " href="/aboutme">About Me</a></li>
-            <li class="px-4 py-2 -skew-y-2 bg-[var(--color-secondary)] md:bg-transparent flex flex-grow hover:bg-transparent"><a class="px-1 py-1 md:bg-transparent flex flex-grow hover:underline hover:bg-[var(--color-text)] md:hover:text-[var(--color-accent)] hover:scale-105 " href="/skills">Skills</a></li>
-            <li class="px-4 py-2 -skew-y-2 bg-[var(--color-secondary)] md:bg-transparent flex flex-grow hover:bg-transparent"><a class="px-1 py-1 md:bg-transparent flex flex-grow hover:underline hover:bg-[var(--color-text)] md:hover:text-[var(--color-accent)] hover:scale-105 " href="/tecnologies">Technologies</a></li>
+            <li class="px-4 py-2 -skew-y-2 bg-[var(--color-secondary)] md:bg-transparent flex flex-grow hover:bg-transparent"><a class="px-1 py-1 md:bg-transparent flex flex-grow hover:underline hover:bg-[var(--color-primary)] md:hover:text-[var(--color-accent)] hover:scale-105 " href="/">Home</a></li>
+            <li class="px-4 py-2 -skew-y-2 bg-[var(--color-secondary)] md:bg-transparent flex flex-grow hover:bg-transparent"><a class="px-1 py-1 md:bg-transparent flex flex-grow hover:underline hover:bg-[var(--color-primary)] md:hover:text-[var(--color-accent)] hover:scale-105 " href="/aboutme">About Me</a></li>
+            <li class="px-4 py-2 -skew-y-2 bg-[var(--color-secondary)] md:bg-transparent flex flex-grow hover:bg-transparent"><a class="px-1 py-1 md:bg-transparent flex flex-grow hover:underline hover:bg-[var(--color-primary)] md:hover:text-[var(--color-accent)] hover:scale-105 " href="/skills">Skills</a></li>
+            <li class="px-4 py-2 -skew-y-2 bg-[var(--color-secondary)] md:bg-transparent flex flex-grow hover:bg-transparent"><a class="px-1 py-1 md:bg-transparent flex flex-grow hover:underline hover:bg-[var(--color-primary)] md:hover:text-[var(--color-accent)] hover:scale-105 " href="/tecnologies">Technologies</a></li>
         </ul>
 
-        <ul class="flex flex-col lg:flex-row w-full text-[var(--color-textTitle)] md:text-[var(--color-accent)] lg:w-auto p-2 md:p-0">
+        <ul class="flex flex-col lg:flex-row w-full text-[var(--color-text)] md:text-[var(--color-accent)] lg:w-auto p-2 md:p-0">
             <li class="lg:ml-auto"><a class="px-4 py-2 -skew-y-2 flex flex-grow hover:underline hover:bg-[var(--color-primary)] md:bg-[var(--color-secondary)] hover:text-[var(--color-accent)] hover:scale-105 " href="/connect">Connect</a></li>
         </ul>
     </nav>
