@@ -55,12 +55,12 @@
             {{ errorMsg }}
         </div>
         
-        <input v-model="name" type="text" placeholder="Name" class="w-full border-b-2 p-1 border-gray-400 focus:outline-none focus:border-gray-500 py-2 placeholder-gray-500" required />
+        <input v-model="name" type="text" placeholder="Name" class="w-full border-b-2 p-1 border-gray-400 focus:outline-none focus:border-[var(--color-secondary)] py-2 placeholder-gray-500" required />
        
-        <input v-model="email" type="email" placeholder="Email" class="w-full border-b-2 p-1 border-gray-400 focus:outline-none focus:border-[var(--color-primary)] py-2 placeholder-gray-500" required />
+        <input v-model="email" type="email" placeholder="Email" class="w-full border-b-2 p-1 border-gray-400 focus:outline-none focus:border-[var(--color-secondary)] py-2 placeholder-gray-500" required />
 
         <div>
-            <textarea v-model="message" rows="4" placeholder="Message" class="w-full border-b-2 p-1 border-gray-400 focus:outline-none focus:border-[var(--color-primary)] py-2 placeholder-gray-500" required>
+            <textarea v-model="message" rows="4" placeholder="Message" class="w-full border-b-2 p-1 border-gray-400 focus:outline-none focus:border-[var(--color-secondary)] py-2 placeholder-gray-500" required>
 
             </textarea>
         </div>

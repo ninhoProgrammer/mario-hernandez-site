@@ -9,7 +9,7 @@
             description: 'This is a page built with Astro and it\'s free. Software development — we build your website so you can be everywhere.', // explanatory text
             circleColor: 'bg-red-500 hover:bg-red-600', 
             image: '../landingpage.webp', 
-            url: 'https://landing-page-delta-roan.vercel.app', // destination URL
+            url: 'https://landing-page-muestra.vercel.app/', // destination URL
         },
 
         {
@@ -73,7 +73,7 @@
 
                     <div class="absolute bottom-1 md:bottom-0 left-0 right-0 p-6 md:p-4 flex justify-between items-end space-x-4">
                         
-                        <div class="p-4 bg-black/50 backdrop-blur-sm text-[var(--color-accent)] max-w-sm rounded-lg z-10">
+                        <div class="p-4 bg-[var(--color-text)] backdrop-blur-sm text-[var(--color-primary)] max-w-sm rounded-lg z-10">
                             <p class="text-xs md:text-base font-bold">{{ currentSlide.text }}</p>
                         </div>
 
@@ -81,7 +81,7 @@
                             <a 
                                 :href="currentSlide.url"
                                 target="_blank" 
-                                :class="['w-32 h-10 rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center text-white text-xs font-extrabold uppercase tracking-wide', currentSlide.circleColor]"
+                                :class="['w-32 h-10 rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center text-[var(--color-accent)] text-xs font-extrabold uppercase tracking-wide', currentSlide.circleColor]"
                                 rel="noopener noreferrer"
                             >
                                 Ver Más &rarr;
