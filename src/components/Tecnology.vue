@@ -7,7 +7,7 @@
         <div class="w-3/4 -skew-y-2 mx-auto relative overflow-hidden">
             <div class="flex transition-transform  duration-700 ease-in-out" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
                 <div v-for="(group, i) in techGroups" :key="i" class="min-w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 px-4">
-                    <div v-for="tech in group" :key="tech.name" class="bg-white/80 backdrop-blur-lg shadow-md rounded-xl p-4 md:p-6 hover:scale-105 hover:shadow-xl transition">
+                    <div v-for="tech in group" :key="tech.name" class="bg-white/80 backdrop-blur-lg shadow-md p-4 md:p-6 hover:scale-105 hover:shadow-xl transition">
                         <img 
                             :src="tech.logo" 
                             :alt="tech.name" 
@@ -22,7 +22,7 @@
             <div class="absolute top-1/2 left-0 transform -translate-y-1/2">
                 <button 
                     @click="prev" 
-                    class="bg-[var(--color-accent)] p-4 rounded-full hover:scale-110 hover:bg-[var(--color-secondary)] hover:text-[var(--color-accent)] transition"
+                    class="bg-[var(--color-primary)] text-[var(--color-accent)] p-2 hover:scale-110 hover:bg-[var(--color-secondary)] transition"
                 >
                     &lt;
                 </button>
@@ -30,7 +30,7 @@
             <div class="absolute top-1/2 right-0 transform -translate-y-1/2">
                 <button 
                     @click="next" 
-                    class="bg-[var(--color-accent)] p-4 rounded-full hover:scale-110 hover:bg-[var(--color-secondary)] hover:text-[var(--color-accent)] transition"
+                    class="bg-[var(--color-primary)] text-[var(--color-accent)] p-2 hover:scale-110 hover:bg-[var(--color-secondary)] transition"
                 >
                     &gt;
                 </button>

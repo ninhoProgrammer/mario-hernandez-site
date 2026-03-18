@@ -67,13 +67,13 @@
                 <div class="absolute inset-0 bg-black/40"></div>
 
                 <div class="relative w-full h-full flex flex-col justify-between">
-                    <div class="absolute md:top-0 md:right-0 p-4 bg-white/50 backdrop-blur-sm text-bg-[var(----color-accent)] max-w-sm rounded-lg text-center md:text-right">
+                    <div class="absolute md:top-0 md:right-0 p-4 bg-white/50 backdrop-blur-sm text-bg-[var(----color-accent)] max-w-sm text-center md:text-right">
                         <p class="text-xs md:text-base font-medium">{{ currentSlide.description }}</p>
                     </div>
 
-                    <div class="absolute bottom-1 md:bottom-0 left-0 right-0 p-6 md:p-4 flex justify-between items-end space-x-4">
+                    <div class="absolute bottom-1 md:bottom-0 left-0 right-0 p-6 md:p-4 flex flex-col md:flex-row space-y-2 md:space-y-0 justify-center md:justify-between items-center md:items-end">
                         
-                        <div class="p-4 bg-[var(--color-text)] backdrop-blur-sm text-[var(--color-primary)] max-w-sm rounded-lg z-10">
+                        <div class="p-4 bg-[var(--color-secondary)] backdrop-blur-sm text-[var(--color-accent)] max-w-sm z-10">
                             <p class="text-xs md:text-base font-bold">{{ currentSlide.text }}</p>
                         </div>
 
@@ -81,7 +81,7 @@
                             <a 
                                 :href="currentSlide.url"
                                 target="_blank" 
-                                :class="['w-32 h-10 rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center text-[var(--color-accent)] text-xs font-extrabold uppercase tracking-wide', currentSlide.circleColor]"
+                                :class="['w-32 h-10 shadow-2xl transition-all duration-300 flex items-center justify-center text-[var(--color-accent)] text-xs font-extrabold uppercase tracking-wide', currentSlide.circleColor]"
                                 rel="noopener noreferrer"
                             >
                                 Ver Más &rarr;
@@ -97,14 +97,14 @@
 
         <button 
             @click="prevSlide" 
-            class="absolute left-1 md:left-4 top-1/2 -translate-y-1/2 p-3 bg-white/30 text-white rounded-full z-20 hover:scale-110 hover:bg-white/50 transition"
+            class="absolute left-1 md:left-4 top-1/2 -translate-y-1/2 p-2 bg-[var(--color-primary)] text-white z-20 hover:scale-110 hover:bg-[var(--color-secondary)] transition"
         >
             &lt;
         </button>
 
         <button 
             @click="nextSlide" 
-            class="absolute right-1 md:right-4 top-1/2 -translate-y-1/2 p-3 bg-white/30 text-white rounded-full z-20 hover:scale-110 hover:bg-white/50 transition"
+            class="absolute right-1 md:right-4 top-1/2 -translate-y-1/2 p-2 bg-[var(--color-primary)] text-white z-20 hover:scale-110 hover:bg-[var(--color-secondary)] transition"
         >
             &gt;
         </button>
