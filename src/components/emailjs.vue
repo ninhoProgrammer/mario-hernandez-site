@@ -65,9 +65,9 @@
             </textarea>
         </div>
 
-        <button type="submit" :disabled="isLoading" class=" px-4 text-[var(--color-accent)] py-2 bg-[var(--color-secondary)] -skew-y-2 flex hover:underline hover:bg-[var(--color-text)] hover:scale-105 ">
-            <span v-if="isLoading">Enviando...</span>
-            <span v-else>Enviar</span>
+        <button type="submit" :disabled="isLoading" class=" px-4 text-[var(--color-accent)] py-2 bg-[var(--color-secondary)] -skew-y-2 flex hover:underline hover:bg-[var(--color-accent)] hover:text-[var(--color-secondary)] hover:scale-105 hover:shadow-lg transition">
+            <span v-if="isLoading">Sending...</span>
+            <span v-else>Send</span>
         </button>
     </form>
 </template>
