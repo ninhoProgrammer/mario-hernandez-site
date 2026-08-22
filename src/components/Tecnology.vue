@@ -1,7 +1,7 @@
 <template>
     <section class="my-20 md:my-10 py-4 md:py-16  text-center">
         <h2 class="relative text-3xl font-bold text-center mb-8 w-full -skew-y-2 bg-[var(--color-secondary)] text-[var(--color-accent)]">
-            <span class="typed-text inline-block border-r-2 border-[var(--color-secondary)]  animate-blink">{{ animatedText }}</span>
+            <span class="typed-text inline-block border-r-2 border-[var(--color-primary)]  animate-blink">{{ animatedText }}</span>
         </h2>
 
         <div class="w-3/4 -skew-y-2 mx-auto relative overflow-hidden">
