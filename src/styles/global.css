@@ -1,6 +1,19 @@
+
+@font-face {
+    font-family: "Adventure";
+    src: url("../fonts/Adventure.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
-    --color-primary: #F87060; 
+    --color-primary: #e92210; 
     --color-secondary: #102542;
     --color-text: #404040;
     --color-accent: #e5e5e5;
-  }
+}
+
+html {
+    font-family: "Adventure", sans-serif;
+}
