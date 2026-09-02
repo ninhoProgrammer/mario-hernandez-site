@@ -13,27 +13,43 @@ const headerAClasses = 'px-1 py-1 md:bg-transparent flex flex-grow hover:underli
         </a>
     </div>
 
-    <!-- Botón hamburguesa -->
-    <button class="lg:hidden p-2 rounded hover:text-[var(--color-primary)]" onclick="window.openMenu()" aria-label="Abrir menú">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-    </button>
+    
+    {Astro.url.pathname === '/' ? (
+        <>
+        <!-- Botón hamburguesa -->
+        <button type="button" class="lg:hidden p-2 rounded hover:text-[var(--color-primary)]" onclick="window.openMenu()" aria-label="Abrir menú">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
 
-    <!-- Menú -->
-    <nav id="main-menu" class="hidden absolute top-full left-0 w-full bg-[var(--color-accent)] md:bg-transparent text-[var(--color-accent)] md:text-[var(--color-text)] z-50 flex-col lg:flex lg:flex-row lg:static lg:w-auto lg:items-center lg:gap-6">
-        <ul class="flex flex-col lg:flex-row w-full lg:w-auto p-2 md:p-0 space-y-2 md:space-y-0">
-            <li class={headerClasses}><a class={headerAClasses} href="#hero">Home</a></li>
-            <li class={headerClasses}><a class={headerAClasses} href="#aboutme">About Me</a></li>
-            <li class={headerClasses}><a class={headerAClasses} href="#skills">Skills</a></li>
-            <li class={headerClasses}><a class={headerAClasses} href="#tecnologies">Technologies</a></li>
-            <li class={headerClasses}><a class={headerAClasses} href="#proyects">Projects</a></li>
-        </ul>
+        <!-- Menú -->
+        <nav id="main-menu" class="hidden absolute top-full left-0 w-full bg-[var(--color-accent)] md:bg-transparent text-[var(--color-accent)] md:text-[var(--color-text)] z-50 flex-col lg:flex lg:flex-row lg:static lg:w-auto lg:items-center lg:gap-6">
+            <ul class="flex flex-col lg:flex-row w-full lg:w-auto p-2 md:p-0 space-y-2 md:space-y-0">
+                <li class={headerClasses}><a class={headerAClasses} href="#hero">Home</a></li>
+                <li class={headerClasses}><a class={headerAClasses} href="#aboutme">About Me</a></li>
+                <li class={headerClasses}><a class={headerAClasses} href="#skills">Skills</a></li>
+                <li class={headerClasses}><a class={headerAClasses} href="#tecnologies">Technologies</a></li>
+                <li class={headerClasses}><a class={headerAClasses} href="#proyects">Projects</a></li>
+            </ul>
 
-        <ul class="flex flex-col lg:flex-row w-full text-[var(--color-text)] md:text-[var(--color-accent)] lg:w-auto p-2 md:p-0">
-            <li class="lg:ml-auto"><a class="px-4 py-2 -skew-y-2 flex flex-grow hover:underline hover:bg-[var(--color-primary)] md:bg-[var(--color-secondary)] hover:text-[var(--color-accent)] hover:scale-105 " href="#connect">Connect</a></li>
-        </ul>
-    </nav>
+            <ul class="flex flex-col lg:flex-row w-full text-[var(--color-text)] md:text-[var(--color-accent)] lg:w-auto p-2 md:p-0">
+                <li class="lg:ml-auto"><a class="px-4 py-2 -skew-y-2 flex flex-grow hover:underline hover:bg-[var(--color-primary)] md:bg-[var(--color-secondary)] hover:text-[var(--color-accent)] hover:scale-105 " href="#connect">Connect</a></li>
+            </ul>
+        </nav>
+       </>
+    ) : (
+        <>
+            <button type="button" class="flex flex-row w-44 items-center justify-center p-1 bg-[var(--color-secondary)] hover:underline text-[var(--color-accent)] hover:bg-[var(--color-primary)]" onclick="window.history.back()" aria-label="Regresar a la página anterior">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/>
+                </svg>
+                <a class="text-base">Back</a>
+            </button>
+            
+        </>
+    )}
+
     
 </header>
 
@@ -51,9 +67,7 @@ const headerAClasses = 'px-1 py-1 md:bg-transparent flex flex-grow hover:underli
         const isVisible = !menu.classList.contains('hidden');
 
         if (isVisible) {
-            menu.classList.add('hidden');
-            menu.classList.remove('flex');
-            document.removeEventListener('click', closeMenuOnOutsideClick);
+            closeMenu();
         } else {
             menu.classList.remove('hidden');
             menu.classList.add('flex');
@@ -63,15 +77,26 @@ const headerAClasses = 'px-1 py-1 md:bg-transparent flex flex-grow hover:underli
         }
     }
 
+    function closeMenu() {
+        const menu = document.getElementById('main-menu');
+        if (!menu) return;
+
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+        document.removeEventListener('click', closeMenuOnOutsideClick);
+    }
+
     function closeMenuOnOutsideClick(e: MouseEvent) {
         const menu = document.getElementById('main-menu');
         const button = (e.target as HTMLElement)?.closest('button[aria-label="Abrir menú"]');
         if (menu && !menu.contains(e.target as Node) && !button) {
-            menu.classList.add('hidden');
-            menu.classList.remove('flex');
-            document.removeEventListener('click', closeMenuOnOutsideClick);
+            closeMenu();
         }
     }
+
+    document.querySelectorAll('#main-menu a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+    });
 
     window.openMenu = openMenu;
 </script>
