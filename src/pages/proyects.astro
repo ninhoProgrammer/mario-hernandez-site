@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Proyects from '../components/MyProyects.astro';
+import OurProyects from '../components/OurProyects.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Projects" mdOverflow={true}>
+    <section class="section mt-0 h-[100dvh] w-screen flex justify-center items-center">    
+        <Proyects/>
+    </section>
+       
+    <OurProyects/>  
+
+    <Footer />
+</Layout>
