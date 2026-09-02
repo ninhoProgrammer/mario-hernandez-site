@@ -1,8 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Skill from '../components/Skill.vue';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Skills">
+<Layout title="Skills" mdOverflow={true}>
      <Skill client:visible />
+     <Footer />
 </Layout>
