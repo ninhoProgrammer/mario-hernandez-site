@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import AboutmeComp from '../components/Aboutme.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="About Me">
+<Layout title="About Me" mdOverflow={true}>
     <AboutmeComp />
+    <Footer />
 </Layout>
 

@@ -1,12 +1,9 @@
 ---
 import Header from '../components/Header.astro';
-import Island from '../components/Island.astro';
 
 import '../styles/global.css';
-const { title, mdOverflow = false } = Astro.props;
-const isHomePage = Astro.url.pathname === '/';
-
-const bodyClasses = `bg-[url('/blue-sky-background.webp')] bg-fixed bg-cover bg-[var(--color-secondary)] ${isHomePage ? (mdOverflow ? 'md:overflow-hidden' : 'overflow-hidden') : ''}`;
+const { title } = Astro.props;
+const bodyClasses = `bg-[url('/blue-sky-background.webp')] bg-fixed bg-cover bg-[var(--color-secondary)]`;
 ---
 
 <!doctype html>
@@ -20,12 +17,6 @@ const bodyClasses = `bg-[url('/blue-sky-background.webp')] bg-fixed bg-cover bg-
 	</head>
 	<body class={bodyClasses}>
 		<Header />
-		<Island />
 		<slot />
-        
 	</body>
-    
-    
 </html>
-
-
