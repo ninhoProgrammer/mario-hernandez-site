@@ -1,35 +1,68 @@
 <div align="center">
-    <h1 style="font-size: 3em; font-weight: bold; margin: 20px 0;">Portfolio of Mario Hernández - Software & Web Developer</h1>
+  <h1 style="font-size: 3em; font-weight: bold; margin: 20px 0;">Portfolio of Mario Hernández - Software & Web Developer</h1>
+  
 </div>
 
 ![banner](https://raw.githubusercontent.com/ninhoProgrammer/mario-hernandez-site/refs/heads/main/public/Hero.webp)
-![banner](https://raw.githubusercontent.com/ninhoProgrammer/mario-hernandez-site/refs/heads/main/public/Hero.webp)
 
-This page is my portfolio create with tecnologies that I master such as Astro, Vue, React, tailwind and three.js
+## Overview
 
-![[banner](./public/MakeWeb - Hero.webp)](https://raw.githubusercontent.com/MakeWebMX/MakeWebPrincipal/refs/heads/main/public/MakeWeb%20Logo_MW.svg)
+This project is a personal portfolio built with a modern frontend stack focused on performance, maintainability, and a strong visual identity. The site is structured as a static, content-driven application with interactive UI sections, 3D-inspired visuals, and a contact flow for professional inquiries.
 
-<h2><a src="https://img.icons8.com/?size=100&id=aJPLw-4jUCR3&format=png&color=000000" alt="linkedin-circled"/></a> Technologies</h2>
+## Technical Stack
 
-**[Astro](https://astro.build)** is a modern static site generator that allows you to build fast and optimized websites.  
+- [Astro](https://astro.build): static site generation, component-based architecture, asset optimization
+- [Vue](https://vuejs.org/): dynamic UI components and interactive sections
+- [React](https://react.dev/): additional component integration and UI composition
+- [Tailwind CSS](https://tailwindcss.com/): utility-first styling and responsive layout system
+- [Three.js](https://threejs.org/): 3D rendering and visual effects
+- [EmailJS](https://www.emailjs.com/): lightweight email form integration
+- [Vercel](https://vercel.com/): deployment and hosting platform
 
-**[Vue](https://vuejs.org/)** is an approachable, performant and versatile framework for building web user interfaces.
+## Architecture
 
-**[Three.js](https://threejs.org)** is a JavaScript library that enables the creation of 3D graphics in the browser using WebGL.
+The project follows a modular structure optimized for content and component reuse:
 
-**[TailWind](https://tailwindcss.com)** is a utility-first CSS framework, providing a highly customizable and efficient way to style your web applications.
+- `src/pages/`: route-level pages and entry sections
+- `src/components/`: reusable UI blocks such as Hero, About, Projects, Skills, Footer
+- `src/layouts/`: shared layout wrappers
+- `src/styles/`: global CSS and design tokens
+- `src/assets/`: local media and visual assets
+- `public/OBJ/`: 3D model assets and generated visual resources
+- `src/pages/api/send-email.js`: server-side endpoint for handling contact submissions
 
-<h2>Contact Me</h2>
-<a href="https://www.linkedin.com/in/it-mario-hernández/"><img width="64" height="64" src="https://img.icons8.com/arcade/64/linkedin-circled.png" alt="linkedin-circled"/></a>
+## Features
 
-<h2>Comments</h2>
+- Responsive portfolio layout for desktop and mobile
+- Modular section-based architecture for content scalability
+- Fast static rendering and optimized performance via Astro
+- 3D and motion-enhanced visual design
+- Contact form integrated with email service
+- SEO-friendly page structure and metadata-ready configuration
 
-There are comments in Spanish; you can send a message for more information.
+## Local Development
 
-<h2>License</h2>
+```bash
+npm install
+npm run dev
+```
 
-Copyright (c) 2024  Designed & Developed [MakeWeb](https://github.com/MakeWebMX)
+Then open the local Astro development server in your browser.
 
-Please contact [Mario](https://www.linkedin.com/in/it-mario-hernández/) if you would like to reuse any part of this site for personal or commercial use.
+## Production Build
 
-This project is licensed under the terms of the MIT License. See the [MIT License](LICENSE)
+```bash
+npm run build
+npm run preview
+```
+
+## Contact
+
+- LinkedIn: [Mario Hernández](https://www.linkedin.com/in/it-mario-hernández/)
+- GitHub: [MakeWebMX](https://github.com/MakeWebMX)
+
+## License
+
+Copyright (c) 2024 Designed & Developed by [MakeWeb](https://github.com/MakeWebMX)
+
+This project is licensed under the terms of the MIT License. See the [MIT License](LICENSE).
